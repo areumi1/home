@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 처리 취소</title>
+<style type="text/css">
+	#inner{ border : 1px solid red;}
+	#outer {border : 1px dotted green;}
+</style>
+<script>
+	/* 버블링 : 이벤트의 부모요소에 전달되는 단계
+	
+			- stopPropagation() : 이벤트 전달 취소
+				stopImmediatePropagation()
+			- preventDefault() : 이벤트 본래의 동작 취소
+	*/
+
+// 윈도우가 로딩될때까지 기다렸다가 윈도우가 로딩되면 이작업을 실행 하겠습니다. 
+window.onload = function name() {
+/* 	let inner = document.getElementById('inner');
+	inner.addEventListener('click', function () {
+		alert('이너 이벤트')
+	});   */
+	// inner 클릭시 이너이벤트 뿐만 아니라 연관되어있는 아우터 이벤트까지 같이 발생함.
+	
+	let inner = document.getElementById('inner');
+	inner.addEventListener('click', function (evt) {
+		alert('이너 이벤트')
+		evt.stopPropagation();
+		evt.preventDefault();
+	});
+	// 필요시 function (evt){} ()에 변수선언가능
+	
+	
+	let outer = document.getElementById('outer');
+	outer.addEventListener('click', function () {
+		alert('아우터 이벤트')
+	}); 
+	
+}
+
+
+</script>
+</head>
+<body>
+	<div id='outer'>
+		<p>바깥 부분</p>
+		<div id='inner'>
+			<a href='https://www1.president.go.kr/petitions'>안쪽부분</a>
+		</div>
+	</div>
+</body>
+</html>

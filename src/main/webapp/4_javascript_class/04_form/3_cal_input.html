@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 폼 예제 3 </title>
+<script type="text/javascript">
+	// 오늘 날짜 구하기
+window.onload = function() {
+	let today = new Date();
+	frm1.y.value = today.getFullYear();
+	frm1.m.value = today.getMonth() +1 ;
+	frm1.d.value = today.getDate();
+	
+	document.querySelector('#btn').onclick = function(){
+		//(1) 화면에서 각각의 년,월,일, 값을 얻어오기
+		let y = frm1.y.value;
+		let m = frm1.m.value;
+		let d = frm1.d.value;
+		//(2) Date() 객체에 각각의 년,월,일 값을 지정
+		let day = new Date();
+		day.setFullYear(y);
+		day.setMonth(m-1);
+		day.setDate(d);
+		//(3) 해당 날짜의 요일을 구하여 화면 출력
+		let week = ['일','월','화','수','목','금',]
+		frm1.w.value = week[day.getDay()];
+	}
+}
+
+</script>
+</head>
+<body>
+
+<hr><hr>
+
+요일을 알아봅시다. <br>
+
+<form name="frm1">
+	<input type="text" name="y" size=4>년 
+	<input type="text" name="m" size=2>월
+	<input type="text" name="d" size=2>일
+	<input type="button" id='btn' value="☞">
+	<input type="text" name="w" size=4>요일입니다.
+</form>
+
+<hr><hr>
+
+
+</body>
+</html>

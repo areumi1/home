@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 06_SimpleForm.html</title>
+</head>
+<body>
+
+<form>
+	<fieldset>
+		<legend> 회원가입 </legend>
+		<ol>
+			<li>
+				<label for='name'>이름</label>
+				<input type='text' id='name' name='name'>
+			</li>
+			
+			<li>
+				<laber for ='gender'>성별</laber>
+				<input type="radio" name='gender' checked='checked' > 남자
+				<input type="radio" name='gender' > 여자
+			</li>
+			
+			<li>
+				<laber for='job'>직업</laber>
+				<select id = 'job' name='job'>
+					<option>개발자</option>
+					<option>프로그래머</option>
+					<option>코더</option>
+					<option>노가다</option>
+				</select>
+			</li>
+			
+			<li>
+				<laber for='hobby'>취미</laber>
+				<input type='checkbox' name='hobby' checked>잠자기
+				<input type='checkbox' name='hobby'>밥먹기
+				<input type='checkbox' name='hobby'>숨쉬기
+				<input type='checkbox' name='hobby'>멍때리기
+			</li>
+			
+			<li>
+				<laber for='lover'>애인</laber>
+				<input type='radio' name='lover' >있다
+				<input type='radio' name='lover' >없다
+			</li>
+			
+			<li>
+				<input type='submit' value='확인'>
+				<input type='reset' value='취소'>
+			</li>
+		</ol>
+	</fieldset>
+
+</form>
+
+</body>
+</html>

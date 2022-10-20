@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Map / Set 내장 객체 </title>
+<script type="text/javascript">
+
+// 자바스크립트는 인터프리터언어  한줄씩 읽어가며 순차적으로 실행이되며 에러가 날경우 에러가난 줄에서 멈추어 그뒤의 줄도 출력되지 않음.
+
+// 1. Map : 키와 값으로 관리하는 객체
+let m = new Map();
+m.set('java','1111');
+m.set('script','2222');
+m.set('nodejs', '2222');
+m.set('java','3333');   // 1111 을 덮어버림
+
+// for..in : 인덱스를 추출
+// for..of : 요소를 추출 앞이 변수 뒤가 뽑아주는 요소
+for(let k of m){
+	document.writeln(k[0] + '/' + k[1] + '<br/>')
+} // 배열로 넘어옴 좋은 방법은 아님
+
+for(let[k,v] of m){
+	document.writeln(k + '/' + v + '<br/>')
+}
+
+for(let k in m){
+	document.writeln(k + '<br/>');
+} // 인덱스 추출 불가로 출력이 안된다.(에러도 나지 않음)
+
+document.writeln('<hr/>');
+
+
+
+/* [참고] Map과 객체 리터럴의 차이 
+ 	1) 객체 리터럴은 문자열로 프라퍼티명을 지정하지만, Map의 키는 임의의 형으로 설정한다
+ 		 객체뿐만 아니라 NaN도 키가 될 수 있다
+ 	2) Map은 size를 통해 요소의 갯수를 파악한다
+ */
+
+ 
+ 
+ 
+ 
+//-------------------------------------------------------
+// 2. Set  : 중복 값을 허용하지 않는 집합 관리 객체
+let s = new Set();
+s.add('tiger');
+s.add('dog');
+s.add('lion');
+s.add('dog');
+
+for( let k of s){
+	document.writeln(k + '<br/>');
+} 
+
+for (let k in s){
+	document.writeln(k + '<br/>');
+} // 출력되지않음
+
+// [로또]
+let lotto = new Set();
+while( lotto.size < 6){
+	// 램덤수를 추출하여 set에 추가
+	//let su = Math.floor(Math.random()*45)+1;
+	let su = parseInt(Math.random()*45)+1;
+	lotto.add(su);
+	// .add() : Set 개체의 맨뒤에 주어진 value의 새 요소를 추가
+}
+for(let num of lotto){
+	document.writeln( num + '/');
+}
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

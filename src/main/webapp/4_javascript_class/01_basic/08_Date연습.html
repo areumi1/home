@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+	window.onload = function(){
+		document.getElementById('btn').onclick = function(){
+			 let s = document.getElementById('startDate').value;
+			 let e = document.getElementById('endDate').value;
+			 
+			 let sDate = new Date(s);
+			 let eDate = new Date(e);
+			 
+			 let diff = eDate - sDate;
+			 alert(diff);
+			 
+			 // 초 * 60 (분)*60(시)*24 -> 일
+			 let diff2 = Math.ceil(diff / (1000*60*60*24));
+			 alert(diff2);
+	
+		}
+	}
+</script>
+</head>
+<body>
+		시작일 : <input type='date'  id='startDate'> 
+		~
+		종요일  : <input type='date' id='endDate'> 
+		
+		<input type='button' id='btn' value='여행일정'>
+</body>
+</html>

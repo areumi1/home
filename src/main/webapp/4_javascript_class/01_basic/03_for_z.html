@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트의 연산자</title>
+<script type="text/javascript">
+
+document.write("<table border='2'>");
+
+	document.write("<tr>");
+	for(var i=0; i <25; i++) {
+     	 document.write('<td>'+(i+1)+'</td>');
+      		if((i+1)%5==0)
+            { document.write("</tr>");
+               if ((i+1)==25) break; 
+               else document.write("<tr>"); 
+            }
+   };
+	/*
+	 var a = 1;
+	   for(var i = 0 ; i < 5 ; i++){
+	      document.write('<tr>');
+	      for(var j = 0 ; j < 5 ; j++){
+	         document.write('<td>' + a++ + '</td>');
+	      }
+	      document.write('</tr>');
+	   }
+	      document.write('</table>');
+	*/
+
+	
+// td table data	테이블 데이터 
+// tr table row  테이블 엔터
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>폼 예제 2</title>
+</head>
+<script type="text/javascript">
+	window.onload = function() {
+		document.querySelector('#up').onclick = function() {
+			let idx = frm.play.selectedIndex;
+			let optSel = frm.play.options; // s(들) 이 붙으면 무조건 배열
+
+			if (idx > 0) {
+				let temp = optSel[idx].text; // 선택한 값을 변수에 저장
+				optSel[idx].text = optSel[idx - 1].text; // 선택한 값으자리와 -1의 자리 체인지
+				optSel[idx - 1].text = temp; // 체인지된 -1의 값의 자리를 변수에 저장 
+				optSel[idx - 1].selected = true; //  -1값이 아니라 처음 선택한 값을 다시 체크해줌
+				// 테그와 테그 사이 글씨 추출시 text
+				// 인풋테그 안에 글씨 추출시 value
+			}else if (idx==0){
+				let temp = optSel[idx].text;
+				optSel[idx].text = optSel[idx+5].text; 
+				optSel[idx+5].text = temp; 
+				optSel[idx+5].selected = true;
+			}
+		}
+		
+		
+		document.getElementById('down').onclick = function() {
+			let idx = frm.play.selectedIndex;
+			let optSel = frm.play.options;
+			
+			if ( idx > 0){
+				let temp = optSel[idx].text; // 선택한 값을 변수에 저장
+				optSel[idx].text = optSel[idx + 1].text; 
+				optSel[idx + 1].text = temp; 
+				optSel[idx + 1].selected = true;
+			}else {
+				let temp = optSel[idx].text;
+				optSel[idx].text = optSel[id-5].text; 
+				optSel[idx-5].text = temp; 
+				optSel[idx-5].selected = true;
+			}
+		}
+	}
+</script>
+<body>
+
+	내가 제일 좋아하는 놀이 순서대로 한다면
+	<br>
+
+	<form name="frm">
+		<select name="play" size="6">
+			<!-- size에따라 스크롤  -->
+			<option selected>숨쉬기</option>
+			<option>밥먹기</option>
+			<option>그냥있기</option>
+			<option>잠자기</option>
+			<option>술먹기</option>
+			<option>멍때리기</option>
+		</select> <br> <input type="button" id='up' value="▲"><br>
+		<br> <input type="button" id='down' value="▼"><br>
+		<br>
+	</form>
+
+</body>
+</html>

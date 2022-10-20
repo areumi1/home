@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 핸들러 연결 </title>
+<script type="text/javascript">
+	// 바디 위에 선언시 document.getElementById('btn') 읽을수 없어 실행 이벤트 실행되지않음
+	// 윈도우가 실행됬을 때 함수를 불러와 주는데 body문 모두 실행후 나중에 실행해줌
+	// 윈도우가 로딩 됬을 때 브라우저가 모두 읽어와 줬을때 함수를 불러와 작업을 실행
+	// 윈도우가 로딩될때까지 기다렸다가 윈도우가 로딩되면 이작업을 실행 하겠습니다. 
+	// 함수를 한번만 사용할경우 이름을 생략하고 사용
+	window.onload = function() {
+		let btn = document.getElementById('btn');	// 문서에서 아이디 비티엔을 찾아 변수에 담아주고
+		btn.onclick = 	function(){
+						 alert('버튼클릭2');
+						}	 // 이벤트가 발생하면 함수를 부를꺼야
+	}
+
+
+</script>
+
+
+  </head>
+ <body>
+	<input type='button' value='눌러'  id='btn' />
+	
+	
+<!-- 	<script type="text/javascript">
+	let btn = document.getElementById('btn');	// 문서에서 아이디 비티엔을 찾아 변수에 담아주고
+	btn.onclick = btn_click;	 // 이벤트가 발생하면 함수를 부를꺼야
+
+	function btn_click() {
+		alert('버튼클릭');
+	}
+	 -->
+	 
+<!-- 	 <script type="text/javascript">
+	let btn = document.getElementById('btn');	// 문서에서 아이디 비티엔을 찾아 변수에 담아주고
+	btn.onclick = 	function(){
+					 alert('버튼클릭2');
+					}	 // 이벤트가 발생하면 함수를 부를꺼야
+
+</script>
+	  -->
+	
+	
+ </body>
+ 
+</html>

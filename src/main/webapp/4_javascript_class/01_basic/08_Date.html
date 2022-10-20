@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date 객체</title>
+<script type="text/javascript">	
+ 	
+	var d = new Date('2023/08/13');
+	document.writeln( d  + '<br/>');			// 
+	document.writeln( d.getYear()  + '<br/>');	// 123출력 년도를 뽑아올때 getYear이아닌 getFullYear()로 사용해야한다.
+	document.writeln( d.getFullYear()  + '<br/>');
+	document.writeln( d.getMonth()  + '<br/>');	// 7 미국에서 개발된 프로그램으로 0부터 시작하여 개발시 +1 or -1을 꼭 붙여줘야한다.
+	document.writeln( d.getMonth()+1  + '<br/>');
+	document.writeln( d.getDate()  + '<br/>');
+	document.writeln( d.getDay()  + '<hr/>');   // sun:0 
+
+	let today = new Date();
+	document.writeln( today  + '<br/>');
+	document.writeln( today.toLocaleString()  + '<br/>');
+	document.writeln( today.toGMTString()  + '<br/>');  // 시간이 안맞음.
+	document.writeln( today.toDateString()  + '<br/>');
+	
+	// 지정해서 받아오기 2025-05-12 
+	let day = new Date();
+	day.setFullYear(2025);
+	day.setMonth(5-1);
+	day.setDate(12);
+	document.writeln( day.toLocaleString()  + '<br/>');
+	
+	let today1 = new Date();
+	today1.setMonth( today1.getMonth() -3 );
+	document.writeln( today1.toDateString() + '<br/>');
+	
+	// 현재날짜에서 20일을 더하면
+	let today2 = new Date();
+	today2.setDate( today2.getDate() + 20);
+	document.writeln( today2.toLocaleString() + '<br/>');
+	
+	// 
+	let today3 = new Date();
+	today3.setDate(0); // 전달의 최고 일 출력
+	document.writeln( today3.toLocaleString() + '<br/>');
+	
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

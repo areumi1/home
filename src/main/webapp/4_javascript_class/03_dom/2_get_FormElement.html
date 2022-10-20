@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Document 예제 </title>
+<meta charset="UTF-8">
+<style type="text/css">
+ body { 
+		background-color: #ffcc33;
+		color: #2222ff;
+	} 	
+</style>
+
+<script type="text/Javascript">
+	window.onload = function(){
+    	document.getElementById('btn').onclick = function(){
+			
+    		// 1. id로 찾기
+    		// 1) let userName = document.getElementById('userName');
+    		// 2) let userName = document.querySelector('#userName');
+    		
+    		// 2. 폼태그 안에 있는 경우 name으로 찾을수 있음 
+    		// let username	= document.frm.username;
+    		let username	= document.froms[0].username;	// 폼테그하나가 배열방 1개
+    		
+    		let result	 = document.getElementById('result');
+ 			result.innerHTML = userName.value + '님 반갑';
+    	}
+    	
+    	
+    		
+    }
+</script>
+</head>
+
+<body>
+	<!-- 폼태그 안에 있는 입력값은 서버로 전송할 수 있다  -->
+	<form name="frm">
+		당신의 이름은? <input type="text" id='userName' name='username' size="20">
+		이름 <input type="text" id='userName' name='username' size="15">
+		<input type="button" value="확인" id='btn'>
+   	</form>
+   	
+
+	<div id='result'></div>
+</body>
+</html>
+
+<!--  이벤트바인딩방식을 이벤트 핸들러 방식으로 변경 -->
