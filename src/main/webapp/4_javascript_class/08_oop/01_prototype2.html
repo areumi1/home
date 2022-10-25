@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>01_prototype2.html</title>
+<script type="text/javascript">
+/*
+ * 이름, 국어점수, 영어점수, 수학점수를 저장하고
+ 	해당 클래스 안에는 국,영,수를 총점을 구하는 함수를 가진 클래서 Student 선언
+ */
+ 
+ function Student(name, kor, eng, math){  
+		this.name = name;   // 멤버변수를 지칭하는 this 
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+		
+	/* 	this.sum =function(){ 
+			return   kor + eng + math; // 안에서 사용시 this 생략 가능하다.
+		} */
+	}
+	
+ /*
+  * 자바스크립트의 클래스는 동적인 추가 가능
+  */
+ /* s1.showInfo = function() {
+ 	return (this.name +" : " + this.sum() + '<hr/>')
+ } */
+ /* document.write(s1.showInfo());
+ document.write(s2.showInfo());  */ // s1에게만 동적으로 추가했기 때문에 출력되지 않는다.
+  
+ //Student 안에 있는 모든객체에 추가  // 반드시 this. 사용 
+ /* Student.prototype.showInfo = function() {   
+ 	return (this.name +" : " + this.sum() + '<hr/>') // 반드시 this. 사용 
+ } */
+
+ Student.prototype = {
+ 		showInfo : function() { 
+ 			return (this.name +" : " + this.sum() + '<hr/>')
+ 			},
+ 		sum		: function(){
+ 				return   this.kor + this.eng + this.math;
+ 		}
+ }
+
+
+
+	let s1 = new Student("홍길동",80, 80,70);
+	let s2 = new Student("홍길자",100,90,95);
+
+	document.write( s1.name + "님 "+ s1.sum() + '<br/>' );
+	document.write( s2.name + "님 "+ s2.sum() + '<br/>' );
+
+	document.write(s1.showInfo());
+	document.write(s2.showInfo());
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

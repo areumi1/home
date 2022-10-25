@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="skyblue">
+	<form name="frm1">
+		<select id='dosi' name="dosi" size="1">
+			<!-- size에따라 스크롤  -->
+			<option selected>서울시</option>
+			<option>인천시</option>
+			<option>경기도</option>
+			<option>경상남도</option>
+			<option>강원도</option>
+			<option>부산</option>
+			<option>제주</option>
+		</select>
+		<br/>
+		<input type='text' id='result' name='result' size='20'/>
+	</form>
+	
+	
+	
+	
+	
+
+	<script type="text/javascript">
+
+	winObj = window.open("99_연습2.html","",'width=500, height=650');  
+	
+		let opt  = frm1.dosi;
+		opt.onchange = function(){
+			winObj.frm2.result.value = this.value;
+		
+			
+		}
+	
+	
+	
+	</script>
+</body>
+</html>

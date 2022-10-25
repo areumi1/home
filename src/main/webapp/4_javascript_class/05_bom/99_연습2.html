@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<form name="frm2">
+		<input type='text' name='result' size='20'/> <br/>
+		<input type="radio" name="site"  value='가산' onclick='sel()'> 가산 <br>
+		<input type="radio" name="site"  value='판교' onclick='sel()'> 판교 <br>
+		<input type="radio" name="site"  value='부평' onclick='sel()'> 부평 <br>
+		<br/>
+		<br/>
+</form>
+
+<script type="text/javascript">
+
+function sel(){
+	opener.frm1.result.value = frm2.site.value;
+}
+
+	
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery event</title>
+
+<style type="text/css">
+	.bg { background : yellow; }
+	.border { border : 3px dotted red; }
+</style>
+
+<script type="text/javascript" src="../lib/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('li').css({'cursor':'pointer'});
+	
+	
+	// 원래 이벤트 연결 함수 : bind() / one()
+/* 	$('li').bind('click',function(){
+		//$('#result').text($(this).text());
+	let liTxt =$(this).text();
+	//let liTxt = this.innerHTML; //js
+	$('#result').text(liTxt);}) */
+		
+
+/* 	$('li').click(function(){
+		$('#result').text($(this).text()); */
+		
+//-------------------------------------------------
+	// $('ul') : 찾기
+	// $('<ul>') : 새로운 테크 만들기
+		
+	$('h1').bind('click',function(){
+		let n = $('<li/>').text(new Date());
+		$('ul').append(n);
+	
+	})
+	//---------------------------------
+	//**********************************
+	// 동적으로 생성된 요소에는 이벤트가 발생하지 않음 
+	
+	$('ul').on('click','li',function(){
+		$('#result').text($(this).text());	
+	})
+	
+			
+		
+		
+		
+	
+});
+
+
+</script>
+
+</head>
+<body>
+	<h1>제이쿼리 이벤트</h1>
+	 <ul>
+		<li>부에노스 아이레스</li>
+		<li>바르셀로나</li>
+		<li>리마</li>
+		<li>라파스</li>
+	 </ul>	
+	<div id="result"></div>
+</body>
+</html>

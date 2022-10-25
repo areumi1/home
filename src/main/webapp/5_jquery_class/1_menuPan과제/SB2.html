@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="SB2.css">
+<script src="../lib/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="./SB2.js" charset="utf-8"></script>
+</head>
+<body>
+
+	<div id="wrapper">
+		<!--탭 메뉴 영역 -->
+		<ul class="tabs">
+			<li><a href="#tab1">COLD BREW COFFEE</a></li>
+			<li><a href="#tab2">COFFEE</a></li>
+			<li><a href="#tab3">TEA</a></li>
+		</ul>
+
+		<div class="tab_container">
+			<div id="leftdiv">
+
+				<div id="tab1" class="tab_content">
+					<table class="menutbl">
+						<tr id="menutitle">
+							<th colspan=3 id="titleText"><img src='./스타벅스/SB.png'></th>
+						</tr>
+						<tr class="menus">
+							<td id='menu1' class='menu'><img src="./스타벅스/콜드브루/나이트로 바닐라 크림.jpg" />
+								<br /> <span id="label1" value='(ICE)나이트로바닐라크림'>(ICE)나이트로바닐라크림</span> <span
+								id="price1" value='6200'>6200</span>원 <br /> <select
+								name="menu1Count" id="menu1Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu2' class='menu'><img src="./스타벅스/콜드브루/나이트로 콜드 브루.jpg" />
+								<br /> <span id="label2" value='(ICE)나이트로콜드브루'>(ICE)나이트로콜드브루</span> <span
+								id="price2" value='6200'>6200</span>원<br /> <select
+								name="menu2Count" id="menu2Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu3' class='menu'><img src="./스타벅스/콜드브루/돌체 콜드 브루.jpg" />
+								<br /> <span id="label3" value='(ICE)돌체콜드브루'>(ICE)돌체콜드브루</span> <span
+								id="price3" value='6100'>6100</span>원<br /> <select
+								name="menu3Count" id="menu3Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+
+						</tr>
+						<tr class="menus">
+							<td id='menu4' class='menu'><img src="./스타벅스/콜드브루/바닐라 크림 콜드 브루.jpg" />
+								<br /> <span id="label4" value='(ICE)바닐라크림콜드브루'>(ICE)바닐라크림콜드브루</span> <span
+								id="price4" value='6000'>6000</span>원 <br /> <select
+								name="menu4Count" id="menu4Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu5' class='menu'><img
+								src="./스타벅스/콜드브루/시그니처더블랙콜드브루.jpg" /> <br /> <span id="label5"
+								value='(ICE)시그니처더블랙콜드브루'>(ICE)시그니처더블랙콜드브루</span>
+								 <span id="price5" value='5700'>5700</span>원<br />
+								<select name="menu5Count" id="menu5Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu6' class='menu'><img src="./스타벅스/콜드브루/제주 비자림 콜드 브루.jpg" />
+								<br /> <span id="label6" value='(ICE)제부비자림콜드브루'>(ICE)제부비자림콜드브루</span> <span
+								id="price6" value='6300'>6300</span>원 <br /> <select
+								name="menu6Count" id="menu6Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+						</tr>
+						<tr class="menus">
+							<td id='menu7' class='menu'><img src="./스타벅스/콜드브루/콜드 브루.jpg" />
+								<br /> <span id="label7" value='ICE)콜드브루'>(ICE)콜드브루</span> <span
+								id="price7" value='5500'>5500</span>원 <br /> <select
+								name="menu7Count" id="menu7Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu8' class='menu'><img src="./스타벅스/콜드브루/콜드브루오트라떼.jpg" />
+								<br /> <span id="label8" value='(ICE)콜드브루오트라떼'>(ICE)콜드브루오트라떼</span> <span
+								id="price8" value='5900'>5900</span>원 <br /> <select
+								name="menu8Count" id="menu8Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu9' class='menu'><img src="./스타벅스/콜드브루/오늘의커피.jpg" />
+								<br /> <span id="label9" value='(HOT)오늘의커피'>(HOT)오늘의커피 </span> <span
+								id="price9" value='3500'>3500</span>원 <br /> <select
+								name="menu9Count" id="menu9Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+						</tr>
+					</table>
+				</div>
+				<div id="tab2" class="tab_content">
+
+					<table class="menutbl">
+						<tr id="menutitle">
+							<th colspan=3 id="titleText"><img src='./스타벅스/SB.png'></th>
+						</tr>
+						<tr class="menus">
+							<td id='menu1' class='menu'><img src="./스타벅스/커피/돌체 라떼.jpg" />
+								<br /> <span id="label1" value='(ICE)돌체라떼'>(ICE)돌체라떼</span> <span
+								id="price1" value='5700'>5700</span>원 <br /> <select
+								name="menu1Count" id="menu1Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu2' class='menu'><img src="./스타벅스/커피/아메리카노.jpg" />
+								<br /> <span id="label2" value='(ICE)카페모카'>(ICE)카페모카</span> <span
+								id="price2" value='5400'>5400</span>원<br /> <select
+								name="menu2Count" id="menu2Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu3' class='menu'><img src="./스타벅스/커피/아포카토.jpg" />
+								<br /> <span id="label3" value='아포카토'>아포카토</span> <span
+								id="price3" value='6000'>6000</span>원<br /> <select
+								name="menu3Count" id="menu3Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+
+						</tr>
+						<tr class="menus">
+							<td id='menu4' class='menu'><img src="./스타벅스/커피/아이스아메리카노.jpg" />
+								<br /> <span id="label4" value='(ICE)아메리카노'>(ICE)아메리카노</span> <span
+								id="price4" value='5000'>5000</span>원 <br /> <select
+								name="menu4Count" id="menu4Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu5' class='menu'><img
+								src="./스타벅스/커피/아이스카푸치노.jpg" /> <br /> <span id="label5"
+								value='(ICE)카푸치노'>(ICE)카푸치노</span> <span id="price5" value='5300'>5300</span>원<br />
+								<select name="menu5Count" id="menu5Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu6' class='menu'><img src="./스타벅스/커피/카라멜 마키아또.jpg" />
+								<br /> <span id="label6" value='(ICE)카라멜마키아또'>(ICE)카라멜마키아또</span> <span
+								id="price6" value='5700'>5700</span>원 <br /> <select
+								name="menu6Count" id="menu6Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+						</tr>
+						<tr class="menus">
+							<td id='menu7' class='menu'><img src="./스타벅스/커피/아메리카노.jpg" />
+								<br /> <span id="label7" value='(HOT)아메리카노'>(HOT)아메리카노</span> <span
+								id="price7" value='5000'>5000</span>원 <br /> <select
+								name="menu7Count" id="menu7Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu8' class='menu'><img src="./스타벅스/커피/카푸치노.jpg" />
+								<br /> <span id="label8" value='(HOT)카푸치노'>(HOT)카푸치노</span> <span
+								id="price8" value='5300'>5300</span>원 <br /> <select
+								name="menu8Count" id="menu8Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu9' class='menu'><img src="./스타벅스/커피/카라멜.jpg" />
+								<br /> <span id="label9" value='(HOT)카라멜마키야또'>(HOT)카라멜마키야또</span> <span
+								id="price9" value='5700'>5700</span>원 <br /> <select
+								name="menu9Count" id="menu9Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+						</tr>
+					</table>
+				</div>
+				<div id="tab3" class="tab_content">
+					<table class="menutbl">
+						<tr id="menutitle">
+							<th colspan=3 id="titleText"><img src='./스타벅스/SB.png'></th>
+						</tr>
+						<tr class="menus">
+							<td id='menu1' class='menu'><img src="./스타벅스/티/블렌드 티.jpg" />
+								<br /> <span id="label1" value='(ICE)블렌드'>(ICE)블렌드</span> <span
+								id="price1" value='5700'>5700</span>원 <br /> <select
+								name="menu1Count" id="menu1Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu2' class='menu'><img src="./스타벅스/티/얼 그레이 티.jpg" />
+								<br /> <span id="label2" value='(ICE)얼그레이'>(ICE)얼그레이</span> <span
+								id="price2" value='4500'>4500</span>원<br /> <select
+								name="menu2Count" id="menu2Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu3' class='menu'><img src="./스타벅스/티/유스베리티.jpg" />
+								<br /> <span id="label3" value='(ICE)유스베리'>(ICE)유스베리</span> <span
+								id="price3" value='6000'>6000</span>원<br /> <select
+								name="menu3Count" id="menu3Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+
+						</tr>
+						<tr class="menus">
+							<td id='menu4' class='menu'><img src="./스타벅스/티/유자민트티.jpg" />
+								<br /> <span id="label4" value='(ICE)유자민트'>(ICE)유자민트</span> <span
+								id="price4" value='6000'>6000</span>원 <br /> <select
+								name="menu4Count" id="menu4Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu5' class='menu'><img src="./스타벅스/티/캐모마일티.jpg" />
+								<br /> <span id="label5" value='(ICE)캐모마일 티'>(ICE)캐모마일 티</span> <span
+								id="price5" value='5300'>5300</span>원<br /> <select
+								name="menu5Count" id="menu5Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu6' class='menu'><img src="./스타벅스/티/히비스커스티.jpg" />
+								<br /> <span id="label6" value='(ICE)히비스커스'>(ICE)히비스커스</span> <span
+								id="price6" value='5700'>5700</span>원 <br /> <select
+								name="menu6Count" id="menu6Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+						</tr>
+						<tr class="menus">
+							<td id='menu7' class='menu'><img src="./스타벅스/티/베리.jpg" />
+								<br /> <span id="label7" value='(HOT)유자베리'>(HOT)유자베리'</span> <span
+								id="price7" value='6000'>6000</span>원 <br /> <select
+								name="menu7Count" id="menu7Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu8' class='menu'><img src="./스타벅스/티/민트.jpg" />
+								<br /> <span id="label8" value='(HOT)유자민트'>(HOT)유자민트</span> <span
+								id="price8" value='6000'>6000</span>원 <br /> <select
+								name="menu8Count" id="menu8Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+							<td id='menu9' class='menu'><img src="./스타벅스/티/히비.jpg" />
+								<br /> <span id="label9" value='(HOT)히비스커스'>(HOT)히비스커스</span> <span
+								id="price9" value='5700'>5700</span>원 <br /> <select
+								name="menu9Count" id="menu9Count" class='menuCount'>
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+							</select></td>
+						</tr>
+
+
+					</table>
+				</div>
+
+				<div id="rightdiv">
+					<table id="listTable">
+						<tr id="listtitle">
+							<th colspan=3 id="titleText">주문 내역</th>
+						</tr>
+						<tr id="totallist">
+							<td colspan='3'>총합 : <input type='text' id='total' /> 원 <input
+								type='button' value='주문하기' id='btn' />
+							</td>
+						</tr>
+						<tr id="listtr">
+							<td width="150">목록</td>
+							<td width="100">갯수</td>
+							<td width="100">가격</td>
+							<td width="50">삭제</td>
+						</tr>
+
+					</table>
+				</div>
+			</div>
+</body>
+</html>

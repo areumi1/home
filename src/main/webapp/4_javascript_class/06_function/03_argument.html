@@ -7,6 +7,28 @@
 
 //@함수는 인자의 갯수를 체크하지 않는다.
 
+/*
+function multiple(first, second){
+	return first*second;
+}
+document.write('곱은 ' + multiple(3,4) + '<br/>');	 // 12
+document.write('곱은 ' + multiple(3,4,5) + '<br/>');  // 12 갯수를 체킹하지 않음 5값을 보내지만 받지않음.
+document.write('곱은 ' + multiple(3) + '<br/>');  // NaN   3*언디파운드 => NaN
+*/
+
+//함수의 인자갯수를 체킹하지않음
+// 인자 값을 보내더라도 받지않아도 문제가 되지않는다.
+// 함수의 인자갯수를 체킹하지않기 때문에 오버로딩이 없어 함수명이 동일해서는 안된다.
+
+
+function multiple(args){
+	return args.first * args.second;
+}
+
+let obj = {first : 3, second : 4};
+document.write('곱은 2 -> ' + multiple(obj) + '<br/>');
+
+
 </script>
 </head>
 <body>

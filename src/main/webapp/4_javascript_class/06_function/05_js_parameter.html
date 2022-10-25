@@ -4,6 +4,27 @@
 	<meta charset="UTF-8">
 	<title> 파라메터 인자</title>
 	<script>
+		// 1. 함수의 인자로 기본형 (call by value)
+		let pri = 10; 
+		function priParam(pri){
+			pri--;
+			return pri;
+		}
+		document.write('1> 기본형 인자 : '+ priParam(pri)+"<br/>"); //9
+		document.write('2> 기본형 인자 : '+ pri+"<br/>"); //10
+		// function에 변경된 변수값이 글로벌변수에 영향을 미치지 않음.
+		// 원본값을 복사해서 사용해 원본에 영향을 미치지않음.
+		
+		// 2. 함수의 인자로 참조형 (call by reference)
+		// 값을 가지고있는 주소를 가진 변수를 참조형 변수 
+		let ref = [1,2,3,4,5]
+		function refParam(ref){
+			ref.pop();   // .pop() 마지막요소 삭제
+			return ref;
+		}
+		document.write('1> 참조형 인자 : '+ refParam(ref)+"<br/>"); //1,2,3,4
+		document.write('2> 참조형 인자 : '+ ref+"<br/>"); //1,2,3,4,5
+		// 주소를 가지고 있어 변경되면 원본에도 영향을 미친다.
 
 	</script>
 </head>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title> 첫 연습 </title>
+	<!-- 제이쿼리 라이브러리 연결 -->
+	<!-- 절대경로로 찾기 (내부경로)-->
+	<!--  <script type="text/javascript" src = '/WebUI/5_jquery_class/lib/jquery-3.6.1.min.js'></script> -->
+	<!-- 절대경로로 찾기 (내부경로)-->
+	<!-- <script type="text/javascript" src='../lib/jquery-3.6.1.min.js'></script> -->
+	<!-- CDN방식으로 다운받는경우 (외부경로) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	// 메모리에 올라 왔을때 함수를 실행하기 위해 사용 필수
+	
+/* 	$(document).ready(function(){
+		$('div#here').hide();
+		//$('div #here').hide(); 공백 넣을 경우 자손을 찾는다.
+		
+		//$().text();  // 값이 없으면 getter 값이 있으면 setter
+		//$('#student > div#name').text('홍돌이'); // setter  // 아이디테크가 어디있는지 자세하게 작성해야한다.
+		let n = $('#student > div#name');
+		alert(n.text());  //getter
+		n.text('홍이');	  //setter
+		alert(n.text());  //getter 
+		// setter 와 getter의 함수명은 동일.
+	}); */
+	
+	$(document).ready(function(){
+
+		$('#here').click(function(){
+			$('#here').text('마우스 클릭함');
+		});
+		
+		$('#here').mouseover(function () {
+			$(this).text('마우스가 올라감')  
+			$(this).css({'color':'red'})
+		});
+		
+		$('#here').mouseout(function(){
+			$(this).text('마우스가 나감')  
+			$(this).css({'color':'blue'})
+		});
+		
+		$('#here').hover(function(){ // mouseover,mouseout 한꺼번에 선언 : hover
+			$(this).css({'border':'2px solid green'})
+		},function(){
+			$(this).css({'border':'2px dotted yellow'})
+		});
+		
+		// hide() : 안보이게 / show() : 보이게
+		// 효과함수
+		//$('#here').fadeOut(1000);  // 서서히 안보이게  1000 = 1초
+		//$('#here').fadeIn(1000);	// 서서히 보이게
+		//$('#here').fadeOut(2000).fadeIn(2000); // 체이닝 : 이어서 쓰는것
+		$('#here').slideUp(2000).slideDown(2000); 
+		
+		// 요소 찾기
+		let s = $('#student');
+		let n = s.find('#name');   // find : 자손요소중 선택자에 해당하는 요소
+		n.text('홍가');   // text : 테그안 글씨를 가져오거나 바꿀때 사용
+		n.html('<span>홍가2</span>'); //html : 테그까지 가져와서 바꿔준다.
+		
+	}); 
+	
+	
+	</script>
+</head>
+<body>
+	
+
+	<div id="here">
+	아자아자 제이쿼리~~!!! 
+	</div>
+	
+	
+	<div id="student">
+		<div id="name">홍길동</div>
+		<div id="age">34</div>
+	</div>
+
+
+	
+</body>
+</html>

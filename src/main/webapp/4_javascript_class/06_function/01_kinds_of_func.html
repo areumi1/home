@@ -4,7 +4,32 @@
 	<meta charset="UTF-8">
 	<title>자바스크립트 함수 만들기</title>
 	<script>
+	// (1) function 키워드 함수
+	function first(){
+		let txt = document.querySelector('#first');
+		txt.style.backgroundColor = '#CCCC44';
+		txt.style.color = '#321111'
+	}
+	
+	// (2) 함수리터럴
 
+	let second = function second(){
+		let txt = document.querySelector('#second');
+		txt.style.backgroundColor = 'pink';
+		txt.style.color = '#321111';
+	} 
+	
+	// (3) Function 생성자
+	let third =  new Function("let txt = document.querySelector('#third'); txt.style.backgroundColor = 'skyblue';txt.style.color = '#321111';");
+		
+	
+	// (4) 애로우함수
+	
+	let fourth = () => {
+		let txt = document.querySelector('#fourth');
+		txt.style.backgroundColor = 'pink';
+		txt.style.color = '#321111';
+	}
 	</script>
 </head>
 
@@ -12,10 +37,10 @@
 	<p> <span id="first"> 1. function 명령 </span>
 		<input type="button" value="확인" onclick="javascript:first()"/>
 	</p>
-	<p> <span id="third"> 2. 함수 리터럴 </span>
+	<p> <span id="second"> 2. 함수 리터럴 </span>
 		<input type="button" value="확인" onclick="javascript:second()"/>
 	</p>
-	<p> <span id="second"> Function 생성자 </span>
+	<p> <span id="third"> Function 생성자 </span>
 		<input type="button" value="확인" onclick="javascript:third()"/>
 	</p>
 

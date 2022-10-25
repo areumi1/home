@@ -6,7 +6,7 @@
 <script>
  
 	// @ 1. 인수의 기본값(default) 지정
-   	function multiple( first, second )
+   	function multiple( first, second =1)  // 만약 인자가 안들어온다면 = ? 로 default값 설정가능
 	{
 		return first * second;
 	}
@@ -14,14 +14,16 @@
 	document.writeln('곱은 ' +  multiple( 3, 4, 5 ) + '<br/>'  );
 	document.writeln('곱은 ' +  multiple( 3 ) + '<br/>' ); 
 	
-
+	// 중요하지 않음.
+	document.writeln('곱은 ' +  multiple( 3, null ) + '<br/>' ); 
+	document.writeln('곱은 ' +  multiple( 3, false ) + '<br/>' ); 
+	document.writeln('곱은 ' +  multiple( 3, undefined ) + '<br/>' ); 
 	
 	
 	// @ 2. 가변길이 인수(...)
 
 	 
-		 
- 
+		
 </script>
 </head>
 <body>

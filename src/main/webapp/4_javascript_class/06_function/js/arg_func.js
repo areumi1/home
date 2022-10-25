@@ -5,6 +5,7 @@ function arrayProcess( data, f ) {
 		f(  data[key].value );
 	}
 }
+// (data ,f) f자리에 함수이름이 들어와 f(  data[key].value ); 에서 함수호출
 
 // 각각의 데이터를 더하는 함수
 var sumResult = 0;

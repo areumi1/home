@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div>주소입력합니다.</div>
+
+<input type='text' id='text'  readonly>
+<input type= 'button' id='addr' value='주소찾기'>
+<!-- 
+	- 다음카카오 개발자 모드
+	- 주소창띄우는 법이 있음.
+	'주소찾기'버튼이 눌렸을 때 카카오주소창이 열림
+	해당하는 주소를 선택하면 우리 텍스트필드창에 적힘
+ -->
+ 
+
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+
+    document.getElementById("addr").addEventListener("click", function(){
+        //카카오 지도 발생
+        new daum.Postcode({
+            oncomplete: function(data) { //선택시 입력값 세팅
+                document.getElementById("text").value = data.address; // 주소 넣기
+            }
+        }).open();
+    });
+
+</script>
+</body>
+</html>

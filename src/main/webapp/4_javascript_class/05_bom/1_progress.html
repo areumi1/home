@@ -13,9 +13,17 @@
 <script>
 	var progress = document.getElementById("progress");
 	var current = 0;
-
 	
+	setInterval(function (){progress.value = ++current;}, 100);  // 100번 동작을 할수있겠금 작업
+	//setInterval(updateProgress, 2000);   // 1000 -> 1초
+	// 함수를 통으로 함수의 인자로 들어감
 	
+	/*
+	function updateProgress(){
+		progress.value = ++current;
+		
+	}
+	*/
 	
 
 	/* [참고]

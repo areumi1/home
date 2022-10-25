@@ -4,22 +4,48 @@
 <meta charset="UTF-8">
 <title></title>
 <script type="text/javascript">
-/*  콜백함수란? 함수가 다른 함수의 파라메터로 전달되는 함수
-		 			콜백함수는 함수가 실행되는 중간에 호출되어 상태 정보를 저장하거나 결과 값을 처리할 때 사용
- */
- 
-/* 		//------ 함수 선언
-		  function add(a,b){
-			
-		 }
-		
-		//------ 함수 호출
-		add(10,20); 
-*/
-		
+	/*  콜백함수란? 함수가 다른 함수의 파라메터로 전달되는 함수
+	 콜백함수는 함수가 실행되는 중간에 호출되어 상태 정보를 저장하거나 결과 값을 처리할 때 사용
+	 */
 
-		
-		
+/* 	//------ 함수 선언
+	function add(a, b, c) {
+		let result = a+b;
+		c(result);
+		return result ;
+	}
+
+	//------ 함수 호출
+	let resultLet = add(10, 20, function(res){
+		document.write('결과: ' + res + '<br/>')
+		});
+	document.write('리턴 결과 : '+ resultLet + '<hr/>');
+	document.write('리턴 결과 : '+ resultLet + '<hr/>');
+	document.write('리턴 결과 : '+ resultLet + '<hr/>'); */
+	
+	
+	//------ 함수 선언
+	function add(a, b, c) {
+		let result = a+b;
+		c(result);
+		return function () {
+			result++;
+			return '공유결과? ' + result;
+		};
+	}
+
+	//------ 함수 호출
+	let resultLet = add(10, 20, function(res){
+		document.write('결과: ' + res + '<br/>')
+		});
+	document.write('리턴 결과 : '+ resultLet() + '<hr/>');
+	document.write('리턴 결과 : '+ resultLet() + '<hr/>');
+	document.write('리턴 결과 : '+ resultLet() + '<hr/>');
+	result = 1000000; // 글러벌 변수
+	document.write('리턴 결과2 : '+ resultLet() + '<hr/>');
+	//- 클로져
+	// add 안의 지역변수 result 이기때문에 영향을 끼치지않음
+	// 글로벌 변수로 사용하고 싶을시 let 을 사용하지 않고 사용하고 공유하고 싶지않고 특정함수들에 의해서 공유하고 싶을때 let을 사용해 지역변수로 선언한다.
 </script>
 </head>
 <body>

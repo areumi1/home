@@ -18,9 +18,34 @@
 		};
 
 		// 자식클래스
-
-
-
+		let Dog = function(){}
+		Dog.prototype = new Animal(); // JS에서 상속 관계 맺기
+		
+		let dog = new Dog();
+		dog.sound();
+		dog.move();
+		
+		Dog.prototype.sound = function(){
+			document.writeln('멍멍멍 <br/>');		// 오버라이딩
+		}
+		dog.sound();
+		
+		/*
+			Human 클래스는 Animal 클래스를 상속받음.
+			Human 클래스에 객체를 생성하여 변수 ingan에 지정함
+			Animal 클래스의 move 함수르 오버라이딩 하여 
+			move 함수 호출시 '인간은 두 발로 걷는다'라고 출력함
+		*/
+		let Human = function(){};
+		Human.prototype = new Animal();
+		let human = new Human();
+		Human.prototype.move = function () {
+			document.writeln('인간은 두 발로 걷는다 <br/>');
+		}
+		human.move();
+		
+		
+		
 	</script>
 </body>
 </html>

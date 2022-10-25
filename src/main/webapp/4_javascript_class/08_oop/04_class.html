@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title> class 명령 </title>
+<title>class 명령</title>
 <script type="text/javascript">
 
 /*  class 명령어로 클래스 정의하기 (es6)  */
-class Member{
+/* class Member{
 	// 생성자
 	constructor(firstname, lastname,  age){
 		this.firstname = firstname;
@@ -23,7 +23,28 @@ class Member{
 }
 
 let m = new Member('홍길','동', 25);
+document.write(m.getFullName());  */
+
+
+let Member = class{
+	// 생성자
+	constructor(firstname, lastname,  age){
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.age = age;
+	} 
+	
+	// 메소드
+	getFullName(){
+		return this.firstname + " " + this.lastname;
+	}
+	
+
+}// class 도 변수에 지정 가능하다.
+
+let m = new Member('홍길','동', 25);
 document.write(m.getFullName()); 
+
 
 </script>
 </head>
