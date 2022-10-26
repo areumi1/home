@@ -3,11 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <title>광고페이지</title>
+<script type="text/javascript"   src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script type="text/javascript"   src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+
+$(function() {
+	$('#closeWin').click(function(){
+		let chk = $('input[type="checkbox"]').is(':checked');
+		if(chk){
+			$.cookie('promotion','no',{expires:1}); //체크 했을 경우
+		}
+		window.close();
+	});
+	
+	// 속성박스를 찾을 경우 : []에 타입넣기 
+	//:checked  
+	
+	$("#ch").change(function(){  // 체크박스에 변화가 있다면,
+	    if($("#ch").is(":checked")){ // ID 저장하기 체크했을 때,
+	        setCookie($("#ch").val(), 2); // 2일 동안 쿠키 보관
+	    }
+	});
+	
+	
+	
+});
+
+
+</script>
+
+
+
 </head>
 <body>
 <img alt="" src="./images/image.jpg"><br/>
 이 페이지를 오늘 하루 열지 않겠습니다.
-<input type="checkbox">
-<input type='button' id='closeWin' name='closeWin' value='닫기'/>
+<input type="checkbox" >
+<input type='button' id='closeWin' name='closeWin' value='닫기'  />
 </body>
 </html>

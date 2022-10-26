@@ -10,25 +10,22 @@ body {
 }
 
 ul.tabs {
-	margin: 0;
-	padding: 0;
-	float: left;
+	float: left;	
 	list-style: none;
-	height: 32px; /*--Set height of tabs--*/
 	border-bottom: 1px solid #999;
 	border-left: 1px solid #999;
 	width: 100%;
+	
 }
 
 ul.tabs li {
 	float: left;
 	margin: 0;
 	padding: 0;
-	height: 31px;
+	height: 100px;
 	/*--Subtract 1px from the height of the unordered list--*/
-	line-height: 31px; /*--Vertically aligns the text within the tab--*/
+	line-height: 100px; /*--Vertically aligns the text within the tab--*/
 	border: 1px solid #999;
-	border-left: none;
 	margin-bottom: -1px; /*--Pull the list item down 1px--*/
 	overflow: hidden;
 	position: relative;
@@ -39,11 +36,11 @@ ul.tabs li a {
 	text-decoration: none;
 	color: #000;
 	display: block;
-	font-size: 1.2em;
+	font-size: 40px;
 	padding: 0 20px;
 	/*--Gives the bevel look with a 1px white border inside the list item--*/
-	border: 1px solid #fff;
-	outline: none;
+	border: 1px solid #fff;	outline: none;
+
 }
 
 ul.tabs li a:hover {
@@ -57,13 +54,13 @@ html ul.tabs li.active, html ul.tabs li.active a:hover {
 	border-bottom: 1px solid #fff;
 }
 
-/*Tab Conent CSS*/
+
 .tab_container {
 	border: 1px solid #999;
 	border-top: none;
 	overflow: hidden;
-	clear: both;
-	float: left;
+	/* clear: both; */
+	/*float: left;*/
 	width: 100%;
 	background: #fff;
 }
@@ -80,6 +77,7 @@ div {
 
 #rightdiv {
 	left: 10px;
+	background-color: #999;
 }
 
 td.menu {
@@ -116,8 +114,8 @@ td.menu {
 
 #titleText {
 	font-size: 40px;
-	text-align: center;
-	padding-left: 20px;
+	text-align: center;	padding-left: 20px;
+
 	padding-bottom: 5px;
 	width: 500px
 }
@@ -142,7 +140,7 @@ td.menu {
 #listtitle {
 	height: 100px;
 	font-family: 'Jeju Gothic', serif;
-	background-color: #EEEAE3;
+	background-color: #999;
 }
 
 #listtr {
@@ -163,16 +161,34 @@ td.menu {
 }
 
 #total {
-	font-size: 18px;
+	font-size: 22px;
 	padding: 5px 5px;
 }
 
 #btn {
-	font-size: 18px;
+	font-size: 22px;
 	padding: 5px 5px;
 }
 
 #listtr {
 	font-size: 18px;
 	padding: 5px 5px;
+}
+
+.jumun{
+	font-size: 25px;
+	padding: 5px 5px;
+	font-family: 'Nanum Gothic', serif;
+}
+
+#card {
+	font-size:30px;
+	padding:15px 15px; 
+	background-color : white;
+}
+
+#money {
+	font-size:30px;
+	padding:15px 15px; 
+	background-color : white;
 }

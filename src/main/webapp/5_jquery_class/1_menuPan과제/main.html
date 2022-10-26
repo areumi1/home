@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>Plugin</title>
+
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$('.banner_wrap').bxSlider();
+	});
+</script>
+
+<style type="text/css">
+body {
+	margin: 0 auto;
+	width: 300px;
+	background: #1B3C35;
+}
+
+.Btn {
+	font-size: 50;
+	line-height: 0;
+	padding: 100 100;
+}
+
+
+
+
+img {
+
+	border: none 0;
+	vertical-align: center;
+}
+
+#banner_wrap {
+
+	width: 470px;
+	margin: 0 auto;
+}
+
+.banner_wrap {
+	border-left: 1px
+}
+
+#prevBtn {
+	position: absolute;
+	left: 0;
+	top: 10px;
+}
+
+#nextBtn {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+}
+</style>
+
+
+
+
+</head>
+<body>
+	<div class="banner_wrap">
+
+		<div>
+			<img src="./스타벅스/b.jpg" title="사진1">
+		</div>
+		<div>
+			<img src="./스타벅스/a.jpg" title="사진2">
+		</div>
+		<div>
+			<img src="./스타벅스/c.jpg" title="사진3">
+		</div>
+
+	</div>
+	<div class='a'>
+		<br /> <input type='button' value='TAKE IN(매장)' class='Btn' /> <input
+			type='button' value='TAKE OUT(포장)' class='Btn' />
+
+	</div>
+</body>
+</html>

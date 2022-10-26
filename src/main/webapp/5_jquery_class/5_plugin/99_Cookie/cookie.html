@@ -7,6 +7,27 @@
 <script type="text/javascript"   src="js/jquery.cookie.js"></script>
 <script type="text/javascript">
 
+// 쿠키(cookie) : 웹클라이언트(웹브라우저)에 사용자 정보를 저장  
+// expires:1 -> 1 day 단위
+// A업체에서 저장한것을 B업체에서 확인 불가능 (정책)
+// 사이트에 저장된것은 그 사이트에서만 확인 가능하다.
+// 클라이언트 화면에 띄운다.
+$(function(){
+	
+	// 화면 시작시 쿠키 가져오기
+	let c = $.cookie('myemail');
+	$('#txtMail').val(c);
+	
+	
+	$('#btnSave').click(function() {
+		$.cookie('myemail',$('#txtMail').val(),{expires:1});  //val() 은 value로 지정되어있는 값만 가져올수 있다. getter
+		$('#txtMail').val('');  // setter 
+		
+	});
+	
+});
+
+
 </script>
 </head>
 <body>

@@ -10,6 +10,9 @@ div{
 	float:left;
 	position: relative;
 }
+
+
+
 #rightdiv{
 	
 	left: 10px;
@@ -28,9 +31,11 @@ td.menu {
 }
 .menutbl tr td {
 	padding-top: 30px;
+	
 }
 .menutbl tr td img{
 	padding-bottom: 5px;
+
 }
 .menutbl tr td select{
 	margin: 10px;
@@ -98,4 +103,8 @@ td.menu {
 #listtr{
 	font-size:18px; 
 	padding:5px 5px;
+}
+
+.wrapper{
+	padding : 100px;
 }
